@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Cache-control" content="public" />
+		<title>Captive Portal</title>
+		<link rel="icon" type="image/png" href="img/logo.png" />
+		<link rel="stylesheet" href="style/style.css" />
+		<link rel="stylesheet" href="style/terms.css" />
+
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-S0ED32181B"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'G-S0ED32181B');
+		</script>
+	</head>
+	<body>
+		<div class="security-badge">
+			<span>Secured Connection</span>
+		</div>
+
+		<div class="logo-container">
+			<img src="img/logo.png" alt="logo" class="logo" />
+			<h1 class="portal-title">Secure Wi-Fi Access</h1>
+			<p class="portal-subtitle">
+				Connect to our premium wireless network with enhanced security features
+			</p>
+		</div>
+
+		<div class="login-container">
+			<div class="login-header">
+				<h2 class="login-title">
+					<span class="security-icon shield-icon"></span> Authentication
+					Required
+				</h2>
+				<p class="login-description">
+					Enter your voucher code to access the network
+				</p>
+			</div>
+
+			<div id="oper-hint" class="oper-hint"></div>
+			<div id="hotspot-section" class="hidden">
+				<select id="hotspot-selector" class="hidden"></select>
+			</div>
+			<form id="login-form" class="new-container">
+				<p class="v-text">Voucher Access</p>
+				<div id="input-voucher" class="input-voucher">
+					<input
+						type="number"
+						maxlength="7"
+						id="voucherCode"
+						name="voucherCode"
+						placeholder="Enter 6-digit code"
+						inputmode="numeric"
+					/>
+				</div>
+				<div id="input-user" class="hidden">
+					<input
+						id="username"
+						name="username"
+						type="text"
+						placeholder="Username"
+					/>
+				</div>
+				<div id="input-password" class="hidden user-input">
+					<input
+						id="password"
+						name="password"
+						type="password"
+						placeholder="Password"
+					/>
+				</div>
+				<div id="input-simple" class="hidden">
+					<input
+						id="simplePassword"
+						name="simplePassword"
+						type="password"
+						placeholder="Password"
+					/>
+				</div>
+				<div id="input-phone-num" class="hidden">
+					+ <input id="country-code" />
+					<input
+						id="phone-number"
+						name="phone-number"
+						type="text"
+						placeholder="Phone Number"
+					/>
+				</div>
+				<div id="input-verify-code" class="hidden">
+					<input
+						id="verify-code"
+						name="verify-code"
+						type="text"
+						placeholder="Verification Code"
+					/>
+					<button id="get-code">Get Code</button>
+				</div>
+				<input name="clientMac" id="cMac" style="display: none" />
+				<input name="radiusSvrIp" id="radiusServerIp" style="display: none" />
+				<button type="button" id="button-login" class="login-button">
+					Connect
+				</button>
+
+				<!-- <p class="p-text">
+					By connecting to the Smartlink you agree to the
+					<a href="#" id="terms-link" class="terms-link">Terms of Service.</a>
+				</p> -->
+			</form>
+
+			<div id="button-area" class="hidden">
+				<button id="button-facebook" class="hidden">Facebook</button>
+			</div>
+
+			<div class="terms-section">
+				<p>
+					By connecting, you agree to our
+					<a href="#" id="terms-link" class="terms-link">Terms of Service</a>
+				</p>
+			</div>
+
+			<div class="security-tips">
+				<h3><span class="security-icon lock-icon"></span> Security Tips</h3>
+				<ul>
+					<li>Never share your voucher code with others.</li>
+					<li>Ensure you're connecting to the correct network.</li>
+					<li>Report any suspicious activity to network administrators.</li>
+				</ul>
+			</div>
+		</div>
+
+		<p class="copyright">
+			© 2025 Smartlink Services Inc. | All rights reserved
+		</p>
+
+		<div class="security-modal" id="security-modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title">
+						<span class="security-icon warning-icon"></span> Security Alert
+					</h3>
+				</div>
+				<div class="modal-body">
+					<div class="security-alert">
+						<p>
+							Restricted action detected. Developer tools are disabled on this
+							portal.
+						</p>
+					</div>
+
+					<p class="modal-text">
+						For security purposes, this portal restricts access to developer
+						tools and source code inspection.
+					</p>
+
+					<p class="modal-text">This security measure helps protect:</p>
+					<ul class="modal-list">
+						<li>Network integrity and security protocols</li>
+						<li>User authentication systems</li>
+						<li>Sensitive network infrastructure details</li>
+						<li>User privacy and data protection</li>
+					</ul>
+
+					<p class="modal-text">
+						Please continue using the portal through the provided interface. If
+						you believe this is an error, contact network support.
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button class="modal-btn" id="modal-close">I Understand</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="terms-modal" class="security-modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title">Terms of Service</h1>
+					<span class="close">&times;</span>
+				</div>
+				<div class="modal-body">
+					<p><strong>Effective Date: </strong> May 2025</p>
+
+					<h2>1. Service Description</h2>
+					<p>
+						We provide prepaid wireless internet access via voucher codes.
+						Access is available through our hotspot network.
+					</p>
+
+					<h2>2. Trial Access</h2>
+					<p>
+						Each device is eligible for one 30-minute free trial. After this
+						period, you must purchase a voucher to continue using the service.
+						Reuse of the same device for additional trials is not permitted.
+					</p>
+
+					<h2>3. Voucher Validity</h2>
+					<ul>
+						<li>Vouchers are prepaid and non-refundable.</li>
+						<li>
+							Each voucher is valid for the duration and data allowance
+							specified at the time of purchase.
+						</li>
+						<li>
+							Vouchers expire after their time or data cap is reached—whichever
+							comes first.
+						</li>
+					</ul>
+
+					<h2>4. Acceptable Use</h2>
+					<p>Users must not:</p>
+					<ul>
+						<li>Engage in illegal activities or access prohibited content.</li>
+						<li>Resell or share access without written permission.</li>
+						<li>Attempt to bypass voucher limitations or manipulate access.</li>
+					</ul>
+
+					<h2>5. Limitation of Liability</h2>
+					<p>
+						We strive for reliable service but cannot guarantee uninterrupted
+						connectivity. We are not liable for any data loss, business
+						interruption, or other damages resulting from service disruptions or
+						user misuse.
+					</p>
+
+					<h2>6. Privacy</h2>
+					<p>
+						Basic connection data (such as device ID and usage time) is logged
+						for operational and security purposes. No personal content is stored
+						or monitored.
+					</p>
+
+					<h2>7. Payments</h2>
+					<p>
+						All online payments are processed securely through Paystack. We do
+						not store your card or banking information.
+					</p>
+
+					<h2>8. Changes</h2>
+					<p>
+						We reserve the right to update these Terms at any time. Continued
+						use of the service implies your acceptance of any changes.
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button class="modal-btn" id="terms-close">I Agree</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="app.js"></script>
+		<script src="security.js"></script>
+	</body>
+</html>
