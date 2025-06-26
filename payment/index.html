@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="paystack-public-key"
+			content="pk_live_73db92476721d8fae84c8d569cf86c0992ced3a7"
+		/>
+		<title>Smartlink</title>
+		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="/style/style.css" />
+	</head>
+	<body>
+		<div class="security-badge">
+			<span>Secured Connection</span>
+		</div>
+
+		<nav class="logo-container">
+			<img src="/img/logo.png" lt="logo" class="logo" />
+			<h1 class="portal-title">Secure Payment Gateway</h1>
+		</nav>
+		<main>
+			<div class="notification-container" aria-live="polite"></div>
+			<div class="loading-overlay">
+				<div class="loading-spinner"></div>
+				<span class="sr-only">Processing payment...</span>
+			</div>
+
+			<div class="auth-card">
+				<div class="error-message" id="oper-hint"></div>
+				<nav class="tab-nav">
+					<button class="tab-button active">Make Payment</button>
+				</nav>
+
+				<form id="paymentForm">
+					<input
+						type="tel"
+						id="phone"
+						class="input-field"
+						pattern="0[0-9]{9}"
+						placeholder="Phone Number"
+						required
+					/>
+
+					<input
+						type="email"
+						id="email"
+						class="input-field"
+						placeholder="Email Address"
+						required
+					/>
+
+					<select id="amount" class="package-select" required>
+						<option value="" selected>Select a package</option>
+						<option value="" disabled>Limited Data Packages</option>
+						<option value="5">1.5 GB/24hrs - Ghs 5.00</option>
+						<option value="10">3.5 GB/24hrs - Ghs 10.00</option>
+
+						<option value="15">4 GB/7days - Ghs 15.00</option>
+						<option value="20">6 GB/7days - Ghs 20.00</option>
+
+						<option value="50">15 GB/30days - Ghs 50.00</option>
+						<option value="100">35 GB/30days - Ghs 100.00</option>
+
+						<option value="" disabled>Unlimited Data Packages</option>
+						<option value="15">Unlimited/24hrs - Ghs 15.00</option>
+						<option value="75">Unlimited/7days - Ghs 75.00</option>
+						<option value="250">Unlimited/30days - Ghs 250.00</option>
+					</select>
+
+					<button type="submit" id="pay-button" class="btn">Pay Now</button>
+				</form>
+			</div>
+		</main>
+
+		<footer class="copyright">
+			© 2025 Smartlink Services Inc. | All rights reserved
+		<footer/>
+
+		<script src="https://js.paystack.co/v1/inline.js"></script>
+		<script src="paystack.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
