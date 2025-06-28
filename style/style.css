@@ -79,7 +79,8 @@ body {
 	line-height: 1.6;
 }
 
-.login-container,.auth-card {
+.login-container,
+.auth-card {
 	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(10px);
 	border-radius: 15px;
@@ -405,6 +406,10 @@ input[type='number']:focus {
 	.login-title {
 		font-size: 24px;
 	}
+
+	.buyVoucher {
+		width: 100%;
+	}
 }
 
 @media (max-width: 480px) {
@@ -426,5 +431,9 @@ input[type='number']:focus {
 
 	.login-title {
 		font-size: 22px;
+	}
+	
+	.buyVoucher {
+		width: 100%;
 	}
 }
