@@ -1,10 +1,9 @@
-
 body {
 	background: linear-gradient(135deg, #1a2a6c, #2c3e50, #4a235a);
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	justify-content:space-around;
+	justify-content: space-around;
 	align-items: center;
 	padding: 20px;
 	color: #fff;
@@ -12,7 +11,8 @@ body {
 	overflow-x: hidden;
 }
 
-.connect {
+.connect,
+.buyVoucher {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -45,4 +45,8 @@ body {
 	transform: translateY(0);
 }
 
-
+.buyVoucher {
+	
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
