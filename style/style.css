@@ -428,4 +428,9 @@ input[type='number']:focus {
 	.login-title {
 		font-size: 21.5px;
 	}
+
+	.buyVoucher a {
+		padding: 12px;
+		font-size: 16px;
+	}
 }
