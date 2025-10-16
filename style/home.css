@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(135deg, #1a2a6c, #2c3e50, #4a235a);
+	background: #020202;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -23,10 +23,10 @@ body {
 .sign-button {
 	width: 100%;
 	padding: 15px;
-	background: linear-gradient(to right, #3498db, #2980b9);
+	background: #facc15;
 	border: none;
 	border-radius: 10px;
-	color: white;
+	color: #000;
 	font-size: 18px;
 	font-weight: 600;
 	cursor: pointer;
