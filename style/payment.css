@@ -28,7 +28,7 @@ html {
 }
 
 body {
-	background: linear-gradient(135deg, #1a2a6c, #2c3e50, #4a235a);
+	background: linear-gradient(135deg, #1a2a6c, #2c3e50, #8a828d);
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
